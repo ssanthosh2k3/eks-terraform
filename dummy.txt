@@ -1,0 +1,18 @@
+step 1 configure aws cli on terraform machine
+step 2 create IAM user and provide permission 
+
+  ec2:*
+eks:*
+iam:*
+cloudformation:*
+autoscaling:*
+elasticloadbalancing:*
+
+
+step 3. configure below inline policy for same IAM.
+
+Amazon EKS container read only policy
+Amazon CNI policy
+Amazon EKS worker node policy
+
+
