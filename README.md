@@ -1,46 +1,12 @@
 terraform-project/
-├── modules/                     # Reusable modules for organizing code
+├── modules/                     # Reusable modules for organizing code 
 │   ├── network/                 # Example module: networking setup
-│   │   ├── main.tf              # Module resources and logic
+│   │   ├── main.tf              # Module resources and logic (Provider Configuration, Resource Definitions, Variables, Outputs)
 │   │   ├── variables.tf         # Input variables for the module
 │   │   ├── outputs.tf           # Output variables for the module
 │   │   └── README.md            # Documentation for the module
-│   ├── compute/                 # Example module: compute setup (e.g., EC2 instances)
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── README.md
-│   └── storage/                 # Example module: storage setup
-│       ├── main.tf
-│       ├── variables.tf
-│       ├── outputs.tf
-│       └── README.md
-├── environments/                # Environment-specific configurations
-│   ├── dev/                     # Development environment
-│   │   ├── main.tf              # Environment-specific resources
-│   │   ├── variables.tf         # Input variables
-│   │   ├── outputs.tf           # Output variables
-│   │   └── terraform.tfvars     # Environment-specific variable values
-│   ├── prod/                    # Production environment
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   │   └── terraform.tfvars
-│   └── staging/                 # Staging environment
-│       ├── main.tf
-│       ├── variables.tf
-│       ├── outputs.tf
-│       └── terraform.tfvars
-├── global/                      # Global configurations shared across environments
-│   ├── backend.tf               # Backend configuration for Terraform state
-│   ├── providers.tf             # Provider configurations
-│   └── variables.tf             # Shared variables
-├── main.tf                      # Entry point for root module
-├── variables.tf                 # Input variables for the root module
-├── outputs.tf                   # Outputs for the root module
-├── terraform.tfvars             # Default variable values for the root module
-├── terraform.lock.hcl           # Lock file to ensure provider version consistency
-└── README.md                    # Documentation for the project
+
+
 
 
 Commands:
@@ -86,6 +52,23 @@ Use Case: Managing resources that were created outside of Terraform.
 
 9. terraform providers
 Use Case: Checking dependencies and versions.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Terraform Resource Definition and Resource Identifier
+Terraform uses resource definitions to declare the infrastructure you want to manage and resource identifiers to reference and interact with specific resources within and outside Terraform.
+
+Eg: resource "<provider>_<type>" "<name>" {
+  <key> = <value>
+  ...
+}
+
+
+
+
+
 
 
 
